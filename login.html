@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="atm-shell">
+        <section class="login-card">
+            <div class="brand">
+                <div class="brand-icon">ATM</div>
+                <div>
+                    <h1>Secure ATM</h1>
+                    <p>Banking Dashboard</p>
+                </div>
+            </div>
+
+            <form id="loginForm">
+                <label for="cardNumber">Card Number</label>
+                <input id="cardNumber" type="text" maxlength="16"
+                       placeholder="Enter 16-digit card number" required>
+
+                <label for="pin">PIN</label>
+                <input id="pin" type="password" maxlength="4"
+                       placeholder="Enter 4-digit PIN" required>
+
+                <button class="primary-btn" type="submit">Login</button>
+            </form>
+
+            <p id="loginMessage" class="message"></p>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

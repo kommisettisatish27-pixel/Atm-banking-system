@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <main class="atm-shell">
+        <section class="dashboard">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">SECURE BANKING</p>
+                    <h1>ATM Dashboard</h1>
+                </div>
+                <button id="logoutBtn" class="logout-btn">Logout</button>
+            </header>
+
+            <section class="balance-card">
+                <div>
+                    <p>Available Balance</p>
+                    <h2 id="balance">₹10,000</h2>
+                </div>
+                <div class="card-chip">CARD</div>
+            </section>
+
+            <section class="menu-grid">
+                <button class="menu-btn" data-action="balance">
+                    <span>01</span>
+                    <strong>Balance Enquiry</strong>
+                    <small>Check available balance</small>
+                </button>
+
+                <button class="menu-btn" data-action="withdraw">
+                    <span>02</span>
+                    <strong>Withdraw Cash</strong>
+                    <small>Withdraw money</small>
+                </button>
+
+                <button class="menu-btn" data-action="deposit">
+                    <span>03</span>
+                    <strong>Deposit</strong>
+                    <small>Deposit money</small>
+                </button>
+
+                <button class="menu-btn" data-action="transfer">
+                    <span>04</span>
+                    <strong>Transfer</strong>
+                    <small>Transfer funds</small>
+                </button>
+
+                <button class="menu-btn" data-action="statement">
+                    <span>05</span>
+                    <strong>Mini Statement</strong>
+                    <small>View transactions</small>
+                </button>
+
+                <button class="menu-btn" data-action="pin">
+                    <span>06</span>
+                    <strong>Change PIN</strong>
+                    <small>Update your PIN</small>
+                </button>
+            </section>
+
+            <div id="statusMessage" class="status-message">
+                Select an operation to continue.
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
